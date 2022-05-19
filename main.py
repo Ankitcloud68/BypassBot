@@ -18,13 +18,15 @@ def help(update, context):
 
 /droplink -> bypass droplink.co link
 
-/gp -> bypass gplink stinky url
+/gp -> bypass gplink url
+
+/gdt -> bypass gdtot url
 
 /rlb -> bypass rocklinks url
 
 /lv -> linkvertise link bypass
 
-/sd -> AppDrive or DriveApp links (login required wont work for now)
+/sd -> appDrive or driveApp links
 
 /ex -> use this command for these services
 linkvertise.com
@@ -56,6 +58,7 @@ def adf(update, context):
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"Done")
         update.message.reply_text(f"{zkm}")
+
 def ex(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
@@ -105,6 +108,15 @@ def rlb(update, context):
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
 
+def gdt(update, context):
+        zipk = context.args[0]
+        open('1.txt','w').write(zipk)
+        update.message.reply_text(f"processing")
+        os.system('python gdt.py')
+        update.message.reply_text(f"Done")
+        zkm = open('2.txt', 'r').read()
+        update.message.reply_text(f"{zkm}")
+
 updater = telegram.ext.Updater(TOKEN, use_context=True)
 disp = updater.dispatcher
 disp.add_handler(telegram.ext.CommandHandler("start", start))
@@ -115,6 +127,7 @@ disp.add_handler(telegram.ext.CommandHandler("sd", sd))
 disp.add_handler(telegram.ext.CommandHandler("lv", lv))
 disp.add_handler(telegram.ext.CommandHandler("gp", gp))
 disp.add_handler(telegram.ext.CommandHandler("ex", ex))
+disp.add_handler(telegram.ext.CommandHandler("gdt", gdt))
 disp.add_handler(telegram.ext.CommandHandler("rlb", rlb))
 updater.start_polling()
 updater.idle()
