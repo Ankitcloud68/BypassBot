@@ -18,7 +18,12 @@
             "required": false
         },
         "SHARED_DRIVE_ID": {
-            "description": "Copy the link from Shared Drive / Team Drivw Folder and Paste the Id",
+            "description": "Copy the link from Shared Drive / Team Drive Folder and Paste the Id",
+            "value": "",
+            "required": false
+        },
+        "CRYPT": {
+            "description": "Crypt Value of Gdtot Code",
             "value": "",
             "required": false
         },
