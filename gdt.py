@@ -2,6 +2,7 @@ import re
 import os
 import base64
 import requests
+from os import environ
 from urllib.parse import urlparse, parse_qs
 
 crypt = environ.get('CRYPT')
