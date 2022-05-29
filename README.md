@@ -5,13 +5,13 @@
 - (deku/anyway/animewala) - telegram bot creator or convertor
 - TheCaduceus - bypass bots repo supplier
 - yuuki - gplink and droplink bypass bot creator
-- thanioruvan
+- thanioruvan - rocklinks edited bypass
 
 ## Supported Links
 - adf.ly link
 - droplink.co link
 - gplink stinky url
-- AppDrive or DriveApp links (login required wont work for now)
+- appDrive or driveApp links (login required wont work for now)
 - linkvertise.com
 - exe.io/exey.io
 - sub2unlock.net/sub2unlock.com
@@ -36,9 +36,10 @@
 start - Welcome Message
 help - all command list
 gp - gplink and stinkly bypass
+gdt - bypass gdtot links (use crypt)
 adf - bypass adf.ly link
 droplink -  bypass droplink.co link
-sd - AppDrive or DriveApp links (login required wont work )
+sd - appDrive or driveApp links (login required)
 lv -  linkvertise link bypass
 ex - other supported link bypass
 rlb - bypass rocklinks url
