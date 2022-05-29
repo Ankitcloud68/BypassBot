@@ -1,5 +1,6 @@
 import time
 import cloudscraper
+import requests
 from bs4 import BeautifulSoup 
 
 url = open('1.txt', 'r').read()
@@ -8,7 +9,12 @@ print(url)
 print("Checking Link!")
 
 # ---------------------------------------------------------------------------------------------------------------------
-if "takez.co" in url:
+if "toonworld4all" in url:
+    site = requests.get(url)
+    new = site.url
+    t_code=new.split("token=", 1)[-1]
+    url = "https://rocklinks.net/"+t_code
+elif "takez.co" in url:
     t_code=url.split("token=", 1)[-1]
     url = "https://rocklinks.net/"+t_code
 else:
