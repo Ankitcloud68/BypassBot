@@ -8,6 +8,12 @@ print(url)
 print("Checking Link!")
 
 # ---------------------------------------------------------------------------------------------------------------------
+if "takez.co" in url:
+    t_code=url.split("token=", 1)[-1]
+    url = "https://rocklinks.net/"+t_code
+else:
+    url = url
+# ---------------------------------------------------------------------------------------------------------------------
 
 def rocklinks_bypass(url):
     client = cloudscraper.create_scraper(allow_brotli=False)
